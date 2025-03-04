@@ -17,6 +17,7 @@ def initialize():
   sally = RegularUser('sally', 'sally@mail.com', 'sallypass')
   db.session.add_all([bob, rick, sally])  #add all can save multiple objects at once
   db.session.commit()
+  
   #load todo data from csv file
   with open('todos.csv') as file:
     reader = csv.DictReader(file)
